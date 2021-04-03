@@ -1,23 +1,36 @@
-Prerequisites
-A.  An Ubuntu 16.04 server and root user with full privileges. 
-B.  A LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 16.04. 
-C. A Redis Server. 
--------------------------------------------------------------------------------------------------------------------
-STEPS TO FOLLOW :
-A. Logging in as root user
+## Prerequisites
+
+1.  An Ubuntu 16.04 server and root user with full privileges. 
+2.  A LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu 16.04. 
+3. A Redis Server. 
+
+###### STEPS TO FOLLOW :
+1. Logging in as root user
+
 First of all, Please make sure that you have a root user and SSH installed in your system and login to SSH from Termainal using bellow command
-->  ssh root@your_server_ip 
+```
+  ssh root@your_server_ip 
 Eg: ssh root@192.168.151.88
--------------------------------------------------------------------------------------------------------------------
-B. How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 16.04
+```
+
+2. How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 16.04
+
 Step 1 — Installing Apache 
-	-> sudo apt update
-	->sudo apt install apache2
+    ```
+	 sudo apt update
+	 sudo apt install apache2
+	 ```
 Step 2 — Installing MySQL
+
+       ```
 	sudo apt install mysql-server
+	```
 Step 3 — Installing PHP
+
+       ```
 	sudo apt install php libapache2-mod-php php-mysql
--------------------------------------------------------------------------------------------------------------------
+	```
+
 C. How To Install and Secure Redis on Ubuntu 16.04 
 Step 1 — Installing and Configuring Redis
 	sudo apt update

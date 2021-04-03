@@ -128,7 +128,7 @@ User 127.0.0.1 limit exceeded.
 ## Conclusion
 
 As you’ll note, the first three requests ran without a problem. However, your script has rate limited the fourth and fifth requests. This confirms that the Redis server is rate limiting users’ requests.
-This tutorial implemented a PHP script for rate limiting with Redis on an Ubuntu 20.04 server to prevent your web application from malicious overuse. 
+This tutorial implemented a PHP script for rate limiting with Redis on an Ubuntu 16.04 server to prevent your web application from malicious overuse. 
 
 
 

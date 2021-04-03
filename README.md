@@ -10,7 +10,7 @@
 First of all, Please make sure that you have a root user and SSH installed in your system and login to SSH from Termainal using bellow command
 ```
   ssh root@your_server_ip 
-Eg: ssh root@192.168.151.88
+  Eg: ssh root@192.168.151.88
 ```
 
 2. How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 16.04
@@ -77,11 +77,11 @@ In this step, you need to copy the "test.php"  file into the root directory (/va
 This file will be accessible to the public and users can type its address in a web browser to run it. 
 Later you can test  the resource using the curl command.
 
-To begin, open the /var/www/html/test.php file:
+To begin, open the /var/www/html/test.php file by running the below command :
 
 	sudo nano /var/www/html/test.php
 	
-Next, Remember to enter the appropriate value for REDIS_PASSWORD you created before
+Next, Remember to enter the appropriate value for REDIS_PASSWORD you created before for the test.php file
 ```
 <?php
 

@@ -74,8 +74,10 @@ Next, restart the Apache server to load the php-redis library:
 
 Step 4 — Building a PHP Web Resource for Rate Limiting
 
-In this step, you need to copy the "test.php"  file in the root directory (/var/www/html/) of your web server. This file will be accessible to the public and users can type its address in a web browser to run it. 
+In this step, you need to copy the "test.php"  file in the root directory (/var/www/html/) of your web server. 
+This file will be accessible to the public and users can type its address in a web browser to run it. 
 Later you can test  the resource using the curl command.
+
 To begin, open the /var/www/html/test.php file:
 
 	sudo nano /var/www/html/test.php
@@ -97,7 +99,9 @@ In this step, you’ll use the curl command to request the web resource.
  To fully check the script, you’ll request the resource five times in a single command.
  It is possible to do this by including a placeholder URL parameter at the end of the test.php file. Here, you use the value ?[1-5] at the end of your request to execute the curl commands five times.
  
+ ```
  curl -H "Accept: text/plain" -H "Content-Type: text/plain" -X GET http://localhost/test.php?[1-5]
+```
 
 After running the code, you will receive output similar to the following:
 ```
@@ -119,7 +123,7 @@ User 127.0.0.1 limit exceeded.
 
 ```	
 
-Conclusion
+## Conclusion
 
 As you’ll note, the first three requests ran without a problem. However, your script has rate limited the fourth and fifth requests. This confirms that the Redis server is rate limiting users’ requests.
 This tutorial implemented a PHP script for rate limiting with Redis on an Ubuntu 20.04 server to prevent your web application from malicious overuse. 

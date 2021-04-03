@@ -51,10 +51,11 @@ Step 2 — Configuring a Redis Password
 	sudo nano /etc/redis/redis.conf
 	
 Scroll to the SECURITY section and look for a commented directive that reads:
-
+```
 . . .
 # requirepass foobared
 . . .
+```
 
 Uncomment it by removing the #, and change foobared to a secure password:
 After setting the password, save and close the file, then restart Redis:
@@ -80,12 +81,13 @@ To begin, open the /var/www/html/test.php file:
 	sudo nano /var/www/html/test.php
 	
 Next, Remember to enter the appropriate value for REDIS_PASSWORD you created before
-
+```
 <?php
 $redis = new Redis();
 $redis->connect('127.0.0.1', 6379);
 $redis->auth('REDIS_PASSWORD');
 ?>
+```
 
 When you’ve finished editing the /var/www/html/test.php file, save and close it.
 
@@ -98,7 +100,7 @@ In this step, you’ll use the curl command to request the web resource.
  curl -H "Accept: text/plain" -H "Content-Type: text/plain" -X GET http://localhost/test.php?[1-5]
 
 After running the code, you will receive output similar to the following:
-
+```
 [1/5]: http://localhost/test.php?1 --> <stdout>
 --_curl_--http://localhost/test.php?1
 Welcome 127.0.0.1 total calls made 1 in 10 seconds
@@ -114,7 +116,8 @@ User 127.0.0.1 limit exceeded.
 [5/5]: http://localhost/test.php?5 --> <stdout>
 --_curl_--http://localhost/test.php?5
 User 127.0.0.1 limit exceeded.
-	
+
+```	
 
 Conclusion
 
